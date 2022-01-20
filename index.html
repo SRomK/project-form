@@ -21,29 +21,37 @@
 
         <div class="row justify-content-center">
             <div class="col-xl-12 alertMessage">
-                <div class="alert alert-danger" role="alert"> Some fields are missing</div>
+                <div class="alert alert-danger myAlert"  role="alert"><b>Some fields are missing</b></div>
             </div>
         </div>
 
+        <form class="row g-3 needs-validation" action="intro.php" id="myForm" novalidate>
         <div class="row CardCVCAmount justify-content-center rowSpaces">
             <div class="col-xl-7">
                 <div class="form-group">
                     <label for="inputCard">Card#</label>
-                    <input type="number" class="form-control" id="cardNumber" placeholder="Enter card">
+                    <input type="number" class="form-control" id="cardNumber" placeholder="Enter card" required>
+                    <!--Mensajes para validación-->
+                    <div class="valid-tooltip">¡Campo válido!</div>
+                    <div class="invalid-tooltip">Debe completar los datos.</div>
                 </div>
             </div>
 
             <div class="col-xl-3">
                 <div class="form-group">
                     <label for="inputCVC">CVC#</label>
-                    <input type="number" class="form-control" id="CVC" placeholder="Enter CVC">
+                    <input type="number" class="form-control" id="CVC" placeholder="Enter CVC" required>
+                    <div class="valid-tooltip">¡Campo válido!</div>
+                    <div class="invalid-tooltip">Debe completar los datos.</div>
                 </div>
             </div>
 
             <div class="col-xl-2">
                 <div class="form-group">
                     <label for="inputAmount">Amount</label>
-                    <input type="number" class="form-control" id="Amount" placeholder="Enter Amount">
+                    <input type="number" class="form-control" id="Amount" placeholder="Enter Amount" required>
+                    <div class="valid-tooltip">¡Campo válido!</div>
+                    <div class="invalid-tooltip">Debe completar los datos.</div>
                 </div>
             </div>
         </div>
@@ -52,13 +60,17 @@
             <div class="col-xl-6">
                 <div class="form-group">
                     <label for="inputCard">First Name</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter first name" required>
+                    <div class="valid-tooltip">¡Campo válido!</div>
+                    <div class="invalid-tooltip">Debe completar los datos.</div>
                 </div>
             </div>
             <div class="col-xl-6">
                 <div class="form-group">
                     <label for="inputCard">Last Name</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
+                    <input type="text" class="form-control" id="lastName" placeholder="Enter last name" required>
+                    <div class="valid-tooltip">¡Campo válido!</div>
+                    <div class="invalid-tooltip">Debe completar los datos.</div>
                 </div>
             </div>
         </div>
@@ -67,20 +79,26 @@
             <div class="col-xl-6">
                 <div class="form-group">
                     <label for="inputCard">City</label>
-                    <input type="text" class="form-control" id="city" placeholder="Enter city">
+                    <input type="text" class="form-control" id="city" placeholder="Enter city" required>
+                    <div class="valid-tooltip">¡Campo válido!</div>
+                    <div class="invalid-tooltip">Debe completar los datos.</div>
                 </div>
             </div>
 
             <div class="col-xl-3">
                 <div class="form-group">
                     <label for="inputCard">State</label>
-                    <input type="text" class="form-control" id="State" placeholder="Enter state">
+                    <input type="text" class="form-control" id="State" placeholder="Enter state" required>
+                    <div class="valid-tooltip">¡Campo válido!</div>
+                    <div class="invalid-tooltip">Debe completar los datos.</div>
                 </div>
             </div>
             <div class="col-xl-3">
                 <div class="form-group">
                     <label for="inputCard">Postal Code</label>
-                    <input type="number" class="form-control" id="postalCode" placeholder="Enter postal code">
+                    <input type="number" class="form-control" id="postalCode" placeholder="Enter postal code" required>
+                    <div class="valid-tooltip">¡Campo válido!</div>
+                    <div class="invalid-tooltip">Debe completar los datos.</div>
                 </div>
             </div>
         </div>
@@ -88,29 +106,30 @@
         <div class="row justify-content-center rowMessage rowSpaces">
             <div class="col-xl-6">
                 <p>We accept:</p>
+                <span class="radioGr"></span>
                 <div class="cardsicons">
                     <div class="cardMove">
-                        <input type="radio" id="huey" name="drone" value="huey" checked>
-                        <label for="huey"><img class="cards"
+                        <input type="radio" id="huey" name="drone" value="huey" required>
+                        <label class="form-check-label" for="huey"><img class="cards"
                                 src="https://img.icons8.com/ios/50/000000/mastercard-credit-card.png"
                                 alt="MasterCard" /></label>
                     </div>
 
                     <div class="cardMove">
-                        <input type="radio" id="dewey" name="drone" value="dewey">
-                        <label for="dewey"><img class="cards" src="https://img.icons8.com/ios/50/000000/visa.png"
+                        <input type="radio" id="dewey" name="drone" value="dewey" required>
+                        <label class="form-check-label" for="dewey"><img class="cards" src="https://img.icons8.com/ios/50/000000/visa.png"
                                 alt="Visa" /></label>
                     </div>
 
                     <div class="cardMove">
-                        <input type="radio" id="louie" name="drone" value="louie">
-                        <label for="louie"><img class="cards" src="https://img.icons8.com/ios/50/000000/diners-club.png"
-                                alt="Diners Club" /></label>
+                        <input type="radio" id="louie" name="drone" value="louie" required>
+                        <label class="form-check-label" for="louie"><img class="cards" src="https://img.icons8.com/ios/50/000000/diners-club.png"
+                                alt="Diners Club"/></label>
                     </div>
                     <div class="cardMove">
-                        <input type="radio" id="louie" name="drone" value="louie">
-                        <label for="louie"><img class="cards" src="https://img.icons8.com/ios/50/000000/amex.png"
-                                alt="America Express" /></label>
+                        <input type="radio" id="louie" name="drone" value="louie" required>
+                        <label class="form-check-label"  for="louie"><img class="cards" src="https://img.icons8.com/ios/50/000000/amex.png"
+                                alt="American Express" /></label>
                     </div>
                 </div>
             </div>
@@ -128,8 +147,8 @@
         <div class="row colorrowButtons">
             <div class="footerbutton">
                 <div class="col-xl-12">
-                    <button type="submit" class="btn btn-primary lastbutton">Cancel</button>
-                    <button type="submit" class="btn btn-primary lastbutton">Send</button>
+                    <button onclick="clickButtonCancel();" type="submit" class="btn btn-primary lastbutton">Cancel</button>
+                    <button onclick="clickButton()" type="submit" class="btn btn-primary lastbutton">Send</button>
                 </div>
 
 
@@ -137,7 +156,36 @@
             </div>
         </div>
 
+    </form>
     </div>
+    
+    <script src="app.js"></script>
+
+    <script>
+      
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+          'use strict'
+        
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.querySelectorAll('.needs-validation')
+        
+          // Loop over them and prevent submission
+          Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+              form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                  event.preventDefault()
+                  event.stopPropagation()
+                  myAlert.classList.replace('dnone', 'dshow');
+                }
+        
+                form.classList.add('was-validated')
+              }, false)
+            })
+        })()
+              
+            </script>
 </body>
 
 </html>

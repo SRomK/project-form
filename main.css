@@ -24,6 +24,15 @@ h1{
     width: 97%;
 }
 
+.myAlert{
+    display: none;
+}
+
+.d-show{
+    display: block;
+}
+
+
 .rowSpaces{
     margin-top: 10px;
     margin-bottom: 10px;
